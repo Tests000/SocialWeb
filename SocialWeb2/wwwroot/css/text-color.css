@@ -1,0 +1,89 @@
+﻿.text-white {
+    text-decoration-color: white;
+    text-emphasis-color: white;
+}
+
+.text-crismos {
+    text-decoration-color: crimson;
+    text-emphasis-color: crimson;
+}
+
+.form-lightgray {
+    background-color: gray;
+    color: gray;
+}
+
+.Name_indent {
+    margin-left: 5px;
+    border:none;
+}
+
+.Message_indent {
+    margin-top: 30px;
+    margin-left:20px;
+    border: none;
+    text-align:center;
+}
+
+.form-center {
+    margin: 100px auto;
+    width: 500px;
+}
+
+.button-center {
+    margin: auto auto;
+    width: 500px;
+}
+.Message_Date {
+    margin-top: 0;
+    border: none;
+    font-size:small;
+    text-align:right;
+}
+
+.fixed{
+    position:fixed;
+    height:1000px;
+}
+
+.stratch{
+    width:100%;
+}
+
+.message-area{
+    position:fixed;
+    color:grey;
+    bottom:80px;
+    right:0;
+    left:0;
+}
+
+.form-blue {
+    background-color: cornflowerblue;
+    color: cornflowerblue;
+}
+
+.bot-padding {
+    height: 100px;
+}
+
+.chat{
+    position:fixed;
+    bottom:0;
+}
+
+.pad-ar {
+    position: fixed;
+    color: d#343a40 !important;
+    background-color: #343a40 !important;
+    border-bottom-color: #343a40 !important;
+    height: 80px;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+}
+
+.mes-form{
+    right:0;
+    left:0;
+}

@@ -1,0 +1,56 @@
+﻿@model List<SocialWeb2.User>
+@{SocialWeb2.User user = Model.ElementAt(0); }
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="col-3">
+        @await Html.PartialAsync("SidebarPartial")
+    </div>
+    <div class="col-9">
+        <main class="form-signin" id="SingForm">
+            <form class="form-center" method="post" enctype="multipart/form-data">
+                <div class="fa-border-none d-flex p-3 my-3">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-3">
+                        @if (Model.ElementAt(0).Image == null)
+                        {
+                            <img class="align-items-center centered me-3 rounded-circle" src="~/images/nouser.png?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="200" height="200" style="align-self:center">
+                        }
+                        else
+                        {
+                            <img class="align-items-center me-3 rounded-circle" src="@Model.ElementAt(0).Image?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="200" height="200">
+                        }
+                    </div>
+                    <div class="col-3">
+                    </div>
+                </div>
+                <input type="file" name="file" />
+
+                <div class="form-floating">
+                    <input class="form-control" id="floatingName" placeholder="uname" name="uname" value="@user.Name">
+                    <label class="text-white" for="floatingName">Name</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="floatingSurName" placeholder="Surname" name="surname" value="@user.Surname">
+                    <label class="text-white" for="floatingSurName">Surname</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="Date" type="date" placeholder="Date" name="date" value="@user.Birthday">
+                    <label class="text-white" for="Date">Date of birthday</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="login" value="@user.Login" />
+                    <label class="text-white" for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" value="@user.Password">
+                    <label class="text-white" for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating">
+                    <label class="text-white"> @ViewData["Message"]</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit" id="SignBut">Save Change</button>
+            </form>
+        </main>
+    </div>
+</div>

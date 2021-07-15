@@ -1,0 +1,62 @@
+﻿@model List<SocialWeb2.Models.ViewMessage>
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="col-3">
+        @await Html.PartialAsync("SidebarPartial")
+    </div>
+    <div class="col-9">
+        <main class="col-md-9 ms-sm-auto col-lg-10 col-9 px-md-4">
+            <div>
+                <form id="im_dialogs" class="im-page--dcontent ui_clean_list _im_page_dcontent fa-border-none mes-form" method="post">
+                    @if (Model.Count > 0)
+                    {
+                        string classtext;
+                        @foreach (var i in Model)
+                        {
+                            if (i.My)
+                                classtext = "form-lightgray";
+                            else
+                                classtext = "form-blue";
+                            <div name="ChatId" class="fa-border-none d-flex p-3 my-3 text-white rounded shadow-sm @classtext" style="width:100%">
+                                @if (i.Image != null)
+                                {
+                                    <img class="align-items-center me-3 rounded" src="@i.Image?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="48" height="48">
+                                }
+                                else
+                                {
+                                    <img class="align-items-center me-3 rounded" src="~/images/nouser.png?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="48" height="48">
+                                }
+                                <div class="lh-1 col-2">
+                                    <h1 class="h6 mb-0 text-white lh-1 Name_indent">@i.UserName</h1>
+                                </div>
+                                <div class="Message_indent col-6">@i.Text</div>
+                                <div class="Message_Date col-3">@i.Date.ToString()</div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <h1 class="text-white form-center">You haven't messages</h1>
+                    }
+                    <p><a name="bottom" id="bottom"></a></p>
+                </form>
+            </div>
+        </main>
+    </div>
+</div>
+<div class="bot-padding">
+</div>
+<div class="d-flex message-area">
+    <div class="col-3">
+    </div>
+    <div class="col-9">
+        <form class="input-group" method="post">
+            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" name="message">
+            <button class="btn btn-outline-secondary" type="submit" name="ChatId" value="@ViewData["Message"]">Send</button>
+        </form>
+    </div>
+</div>
+<div class="d-flex pad-ar">
+    <div class="col-12 bot-padding">
+    </div>
+</div>

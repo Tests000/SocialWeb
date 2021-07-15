@@ -1,0 +1,134 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>7029f48d-0679-4422-8292-2cb217d88ee6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Models\ViewComponents\" />
+    <Folder Include="Domain\" />
+    <Folder Include="wwwroot\ProfImag\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="wwwroot\js\ckeditor\ckeditor.js" />
+    <None Include="wwwroot\js\ckeditor\ckeditor.js.map" />
+    <None Include="wwwroot\js\ckeditor\LICENSE.md" />
+    <None Include="wwwroot\js\ckeditor\README.md" />
+    <None Include="wwwroot\js\ckeditor\sample\img\github.svg" />
+    <None Include="wwwroot\js\ckeditor\sample\img\logo.svg" />
+    <None Include="wwwroot\js\ckeditor\translations\af.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ar.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ast.js" />
+    <None Include="wwwroot\js\ckeditor\translations\az.js" />
+    <None Include="wwwroot\js\ckeditor\translations\bg.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ca.js" />
+    <None Include="wwwroot\js\ckeditor\translations\cs.js" />
+    <None Include="wwwroot\js\ckeditor\translations\da.js" />
+    <None Include="wwwroot\js\ckeditor\translations\de-ch.js" />
+    <None Include="wwwroot\js\ckeditor\translations\de.js" />
+    <None Include="wwwroot\js\ckeditor\translations\el.js" />
+    <None Include="wwwroot\js\ckeditor\translations\en-au.js" />
+    <None Include="wwwroot\js\ckeditor\translations\en-gb.js" />
+    <None Include="wwwroot\js\ckeditor\translations\eo.js" />
+    <None Include="wwwroot\js\ckeditor\translations\es.js" />
+    <None Include="wwwroot\js\ckeditor\translations\et.js" />
+    <None Include="wwwroot\js\ckeditor\translations\eu.js" />
+    <None Include="wwwroot\js\ckeditor\translations\fa.js" />
+    <None Include="wwwroot\js\ckeditor\translations\fi.js" />
+    <None Include="wwwroot\js\ckeditor\translations\fr.js" />
+    <None Include="wwwroot\js\ckeditor\translations\gl.js" />
+    <None Include="wwwroot\js\ckeditor\translations\gu.js" />
+    <None Include="wwwroot\js\ckeditor\translations\he.js" />
+    <None Include="wwwroot\js\ckeditor\translations\hi.js" />
+    <None Include="wwwroot\js\ckeditor\translations\hr.js" />
+    <None Include="wwwroot\js\ckeditor\translations\hu.js" />
+    <None Include="wwwroot\js\ckeditor\translations\id.js" />
+    <None Include="wwwroot\js\ckeditor\translations\it.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ja.js" />
+    <None Include="wwwroot\js\ckeditor\translations\km.js" />
+    <None Include="wwwroot\js\ckeditor\translations\kn.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ko.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ku.js" />
+    <None Include="wwwroot\js\ckeditor\translations\lt.js" />
+    <None Include="wwwroot\js\ckeditor\translations\lv.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ms.js" />
+    <None Include="wwwroot\js\ckeditor\translations\nb.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ne.js" />
+    <None Include="wwwroot\js\ckeditor\translations\nl.js" />
+    <None Include="wwwroot\js\ckeditor\translations\no.js" />
+    <None Include="wwwroot\js\ckeditor\translations\oc.js" />
+    <None Include="wwwroot\js\ckeditor\translations\pl.js" />
+    <None Include="wwwroot\js\ckeditor\translations\pt-br.js" />
+    <None Include="wwwroot\js\ckeditor\translations\pt.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ro.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ru.js" />
+    <None Include="wwwroot\js\ckeditor\translations\si.js" />
+    <None Include="wwwroot\js\ckeditor\translations\sk.js" />
+    <None Include="wwwroot\js\ckeditor\translations\sl.js" />
+    <None Include="wwwroot\js\ckeditor\translations\sq.js" />
+    <None Include="wwwroot\js\ckeditor\translations\sr-latn.js" />
+    <None Include="wwwroot\js\ckeditor\translations\sr.js" />
+    <None Include="wwwroot\js\ckeditor\translations\sv.js" />
+    <None Include="wwwroot\js\ckeditor\translations\th.js" />
+    <None Include="wwwroot\js\ckeditor\translations\tk.js" />
+    <None Include="wwwroot\js\ckeditor\translations\tr.js" />
+    <None Include="wwwroot\js\ckeditor\translations\tt.js" />
+    <None Include="wwwroot\js\ckeditor\translations\ug.js" />
+    <None Include="wwwroot\js\ckeditor\translations\uk.js" />
+    <None Include="wwwroot\js\ckeditor\translations\vi.js" />
+    <None Include="wwwroot\js\ckeditor\translations\zh-cn.js" />
+    <None Include="wwwroot\js\ckeditor\translations\zh.js" />
+    <None Include="wwwroot\js\ckeditor\vendor.js" />
+    <None Include="wwwroot\js\ckeditor\vendor.js.map" />
+    <None Include="wwwroot\ProfImag\2.png" />
+    <None Include="wwwroot\sass\libs\_breakpoints.scss" />
+    <None Include="wwwroot\sass\libs\_functions.scss" />
+    <None Include="wwwroot\sass\libs\_html-grid.scss" />
+    <None Include="wwwroot\sass\libs\_mixins.scss" />
+    <None Include="wwwroot\sass\libs\_vars.scss" />
+    <None Include="wwwroot\sass\libs\_vendor.scss" />
+    <None Include="wwwroot\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jQuery.UI.Combined" Version="1.12.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.12" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+  </ItemGroup>
+
+</Project>

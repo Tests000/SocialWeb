@@ -1,0 +1,60 @@
+﻿@model List<SocialWeb2.User>
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="col-3">
+        @await Html.PartialAsync("SidebarPartial")
+    </div>
+    <div class="col-9">
+        <main>
+            <form class="aln-center col-12" method="post">
+                <div class="fa-border-none d-flex p-3 my-3">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4">
+                        @if (Model.ElementAt(0).Image == null)
+                        {
+                            <img class="align-items-center centered me-3 rounded-circle" src="~/images/nouser.png?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="200" height="200" style="align-self:center">
+                        }
+                        else
+                        {
+                            <img class="align-items-center me-3 rounded-circle" src="@Model.ElementAt(0).Image?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="200" height="200">
+                        }
+                    </div>
+                    <div class="col-4">
+                    </div>
+                </div>
+                <h1 class="text-white" id="floatingSurName">Name: @Model.ElementAt(0).Name.ToString() @Model.ElementAt(0).Surname.ToString()</h1>
+                <h1 class="text-white" id="Date">Birthday: @Model.ElementAt(0).Birthday.Value.Date.ToString().Split(' ')[0]</h1>
+                <div class="fa-border-none d-flex p-3 my-3">
+                    <button class="btn btn-outline-secondary col-4" name="frList" value="@Model.ElementAt(0).Id 1">Friends list</button>
+                    <button class="btn btn-outline-secondary col-4" name="frList" value="@Model.ElementAt(0).Id 2">Subscribers</button>
+                    <button class="btn btn-outline-secondary col-4" name="frList" value="@Model.ElementAt(0).Id 3">Subscriptions</button>
+                </div>
+                @if (Model.ElementAt(0).Login != User.Identity.Name)
+                {
+                    <div class="fa-border-none d-flex p-3 my-3">
+                        <div class="col-1"></div>
+                        <button class="w-100 btn btn-lg btn-primary mt-4" type="submit" id="SignBut" value="@Model.ElementAt(0).Id" name="mes">Send message</button>
+                        <div class="col-1"></div>
+                    </div>
+                    if (ViewData["Message"] == null)
+                    {
+                        <div class="fa-border-none d-flex p-3 my-3">
+                            <div class="col-1"></div>
+                            <button class="btn btn-lg btn-primary w-100 mt-2 col-10" name="fr" value="@Model.ElementAt(0).Id">Subscribe</button>
+                            <div class="col-1"></div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="fa-border-none d-flex p-3 my-3">
+                            <div class="col-1"></div>
+                            <button class="btn btn-lg btn-primary w-100 mt-2 col-10" name="unfr" value="@Model.ElementAt(0).Id">Unsubscribe</button>
+                            <div class="col-1"></div>
+                        </div>
+                    }
+                }
+            </form>
+        </main>
+    </div>
+</div>

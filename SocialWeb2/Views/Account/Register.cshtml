@@ -1,0 +1,38 @@
+﻿<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="col-12">
+        <main class="form-signin" id="SingForm">
+            <form class="form-center" method="post">
+                <h1 class="h3 mb-3 fw-normal text-white">Please sign in</h1>
+                <div class="form-floating">
+                    <input class="form-control" id="floatingName" placeholder="Name" name="name">
+                    <label class="text-white" for="floatingName">Name</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="floatingSurName" placeholder="SurName" name="surname">
+                    <label class="text-white" for="floatingSurName">Surname</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="Date" type="date" placeholder="Date" name="date">
+                    <label class="text-white" for="Date">Date of birthday</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="login" />
+                    <label class="text-white" for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                    <label class="text-white" for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating">
+                    <label class="text-white"> @ViewData["Message"]</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit" id="SignBut">Sign up</button>
+            </form>
+
+            <form class="form-center" id="references">
+                <a class="btn btn-outline-secondary button-center" href="/Account/Login">Sing in</a>
+            </form>
+        </main>
+    </div>
+</div>

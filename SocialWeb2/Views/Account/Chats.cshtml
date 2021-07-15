@@ -1,0 +1,42 @@
+﻿@model List<SocialWeb2.Models.ViewChat>
+
+
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="col-3">
+        @await Html.PartialAsync("SidebarPartial")
+    </div>
+    <div class="col-9">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div>
+                <form id="im_dialogs" class="im-page--dcontent ui_clean_list _im_page_dcontent fa-border-none" method="post">
+                    @if (Model.Count != 0)
+                    {
+                        @foreach (var i in Model)
+                        {
+                            <button name="ChatId" class="btn btn-outline-secondary fa-border-none d-flex p-3 my-3 text-white rounded shadow-sm form-lightgray" value="@i.Id" style="width:100%">
+                                @if (i.Image != null)
+                                {
+                                    <img class="align-items-center me-3 rounded" src="@i.Image?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="48" height="48">
+                                }
+                                else
+                                {
+                                    <img class="align-items-center me-3 rounded" src="~/images/nouser.png?size=50x0&amp;quality=96&amp;crop=245,518,1247,1247&amp;ava=1" alt="" width="48" height="48">
+                                }
+                                <div class="lh-1 col-2">
+                                    <h1 class="h6 mb-0 text-white lh-1 Name_indent">@i.Name</h1>
+                                </div>
+                                <div class="Message_indent col-6">@SocialWeb2.Controllers.Account.cut(i.LastMessage.Text, 15)...</div>
+                                <div class="Message_Date col-3">@i.LastMessage.Date.ToString()</div>
+                            </button>
+                        }
+                    }
+                    else
+                    {
+                        <h1 class="text-white form-center">You haven't messages</h1>
+                    }
+                </form>
+            </div>
+        </main>
+    </div>
+</div>
